@@ -148,8 +148,9 @@ class Ecommerceconnect extends \Opencart\System\Engine\Controller
             $XID = $this->request->post['XID'];
             $TranCode = $this->request->post['TranCode'];
             $ApprovalCode = $this->request->post['ApprovalCode'];
+            $SD = $this->request->post['SD'];
 
-            $data = "$MerchantID;$TerminalID;$PurchaseTime;$OrderID;$XID;$CurrencyID;$TotalAmount;;$TranCode;$ApprovalCode;";
+            $data = "$MerchantID;$TerminalID;$PurchaseTime;$OrderID;$XID;$CurrencyID;$TotalAmount;$SD;$TranCode;$ApprovalCode;";
 
             $signature_response = base64_decode($this->request->post["Signature"]);
 
@@ -162,7 +163,7 @@ class Ecommerceconnect extends \Opencart\System\Engine\Controller
             } 
             else if ($ok == 0){
                 //payment failed
-                $this->log->write("paymebnt fail other reason");
+                $this->log->write("payment fail other reason");
                 $this->model_checkout_order->addHistory($this->session->data['order_id'], $this->config->get('payment_ecommerceconnect_failed_status_id'), '', true);
             }else{
                 //bad signature
