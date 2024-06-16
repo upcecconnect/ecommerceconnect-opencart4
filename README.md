@@ -9,7 +9,7 @@ This module will enable eCommerceConnect payments in your Opencart 4.*
 • PHP >= 8
 
 #### Instructions
-1. Download the eCommerceConnect Payment Module ".ocmod.zip" plugin file that matches your Opencart version from here: (https://github.com/upcecconnect/ecommerceconnect-opencart4)
+1. Download the eCommerceConnect Payment Module ".ocmod.zip" plugin file that matches your Opencart version from here: https://github.com/upcecconnect/ecommerceconnect-opencart4
 2. Go to Opencart admin panel.
 3. Navigate to Extensions → Installer.
 4. Click "Upload" and choose the downloaded eCommerceConnect plugin's ocmod.zip file.
